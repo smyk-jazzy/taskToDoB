@@ -1,0 +1,11 @@
+
+h3, div {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
+}
+
+.done {
+  background-color: aquamarine;
+}
+.newTasks {
+  background-color: burlywood;
+}

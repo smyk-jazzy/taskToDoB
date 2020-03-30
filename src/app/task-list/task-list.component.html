@@ -1,0 +1,29 @@
+
+<div class="container" [ngClass]="styleClass">
+  <ng-container *ngIf="taskList.length > 0; else noTasks">
+    <div>{{numberTaskCaption}} {{taskList.length}} </div>
+    <ul>
+      <li *ngFor="let task of taskList">
+        <div>
+          {{task}}
+          <button
+          *ngIf="showDoneTaskButton"
+          (click)="doneTask(task)"
+          >Done</button>
+
+          <button (click)="removeTask(task)">Remove</button>
+        </div>
+      </li>
+    </ul>
+    <div>{{removeAllTasksCaption}}
+      <button (click)="removeAllTasks()">Remove all</button>
+    </div>
+  </ng-container>
+
+
+  <ng-template #noTasks>
+    <p>Brak zadań do wykonania</p>
+  </ng-template>
+  <br class="done">
+  <hr class="done">
+</div>
